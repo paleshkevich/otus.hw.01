@@ -25,8 +25,8 @@ RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 # Устанавливаем рабочую директорию
 WORKDIR /app
 
-# Копируем собранный JAR-файл из этапа сборки
-COPY --from=build --chown=appuser:appgroup /app/target/*.jar /app/app.jar
+# Копируем собранный JAR-файл с зависимостями из этапа сборки
+COPY --from=build --chown=appuser:appgroup /app/target/app.jar /app/app.jar
 
 # Меняем владельца рабочей директории на некорневого пользователя
 RUN chown -R appuser:appgroup /app
