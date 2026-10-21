@@ -1,5 +1,7 @@
 # Full-Stack Приложение: OTUS Homework
 
+![Картинка](pics/Screenshot.png)
+
 ## 📌 Краткое описание стека
 
 - **Backend**: Java 21 (чистый Java Core + `com.sun.net.httpserver.HttpServer` + `Google Gson`)
